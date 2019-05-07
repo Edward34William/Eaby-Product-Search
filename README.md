@@ -8,4 +8,4 @@ _Lineng Cao_
 [Demo Page](http://vvvvvincecccchw8.us-west-1.elasticbeanstalk.com/)
 
 ## Android Verison
-[Apk Download]()
+[Apk Download](https://gitlab.com/vcec/eaby-product-search/raw/master/AndroidVer/apk/product-search-debug-v1.apk?inline=false)
