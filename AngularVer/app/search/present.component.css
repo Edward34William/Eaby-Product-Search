@@ -1,0 +1,27 @@
+.nav-item .active {
+    background: #020102 !important;
+    color: white !important;
+}
+
+.list-carousel {
+    background: Red;
+    height: 500px;
+}
+
+.detail-carousel {
+    height: 1000px;
+}
+
+#detail-1{
+    background: blue;
+}
+
+#detail-2{
+    background: yellow;
+}
+
+.list-carousel,
+.detail-carousel {
+    /* height: 1000px; */
+    width: 100%;
+}

@@ -1,0 +1,114 @@
+@media only screen and (min-width: 1200px) {
+  td.t-w-35{
+    width: 65% !important;
+  }
+}
+
+@media only screen and (max-width: 1200px) and (min-width: 769px) {
+
+  a#sim-img {
+    min-width: 180px !important;
+    height: 180px !important;
+  }
+
+  td.t-w-35{
+    width: 65% !important;
+  }
+
+}
+
+@media only screen and (max-width: 769px) {
+
+  a#sim-img {
+    width: 180px !important;
+    height: 180px !important;
+  }
+
+}
+
+img#fb-img {
+  width: 38px;
+  height: 38px;
+}
+
+img#sim-img {
+  width: 180px !important;
+  height: 180px !important;
+}
+
+table a {
+  text-decoration: none;
+  color: #5F9EA0 !important;
+}
+
+img.modal-img.border-5 {
+  border: black 8px solid !important;
+  padding: 2px !important;
+}
+
+#popularity-div {}
+
+#popularity-div p {
+  position: relative;
+  margin-top: 0 !important;
+  margin-bottom: -25px !important;
+  padding: 0 !important;
+  top: -30px !important;
+  left: 3px !important;
+}
+
+.Silver-Rating {
+  color: #C0C0C0 !important;
+}
+
+.Green-Rating {
+  color: #008000 !important;
+}
+
+.Red-Rating {
+  color: #FF0000 !important;
+}
+
+.Purple-Rating {
+  color: #800080 !important;
+}
+
+.Turquoise-Rating {
+  color: #40E0D0 !important;
+}
+
+.Yellow-Rating {
+  color: #FFFF00 !important;
+}
+
+.Blue-Rating {
+  color: #0000FF !important;
+}
+
+.White-Rating {
+  color: white !important;
+}
+
+.rating {
+  font-size: 35px;
+}
+
+/* //////////////////////////////////////////////// */
+
+a#sim-img img{
+  width: 180px !important;
+  height: 180px !important;
+}
+
+#category-sort,
+#letter-sort {
+  width: 150px
+}
+
+.card-columns {
+  column-gap: 8px;
+}
+
+.cart-yellow{
+  color: rgb(177, 140, 26) !important;
+}

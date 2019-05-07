@@ -1,0 +1,39 @@
+
+
+@media only screen and (min-width: 1200px) {
+
+  div#data-table{
+    overflow-y: none !important;
+  }
+
+}
+
+@media only screen and (max-width: 1199px) {
+
+  div#data-table{
+    overflow-y: auto !important;
+  }
+
+}
+
+.pagination>li.active>a {
+  background: #020102 !important;
+  color: white!important;
+}
+
+.pagination>li>a, .pagination>li>span{
+  border: none !important;;
+}
+
+.pagination .page-link{
+  color: #020102!important;
+}
+
+
+.pagination>.page-item.disabled a{
+  color: silver !important;
+}
+
+.cart-yellow{
+  color: rgb(177, 140, 26) !important;
+}

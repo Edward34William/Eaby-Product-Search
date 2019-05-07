@@ -1,0 +1,29 @@
+.ng-valid[required],
+.ng-valid.required {
+  /*border: 2px solid #42A948; /* green */
+}
+
+input.ng-touched.ng-invalid:not(form) {
+  border: 3px solid #a94442;
+  /* red */
+}
+
+::ng-deep .mat-form-field-underline {
+  display: none;
+}
+
+:host ::ng-deep .mat-form-field-wrapper,:host ::ng-deep .mat-form-field-infix{
+  padding-bottom: 0;
+  padding-top: 2px;
+  border-top:0;
+}
+
+:host ::ng-deep .mat-input-element{
+  background: white;
+  padding-left: 12px;
+  height: 38px;
+}
+
+:host ::ng-deep .mat-input-element:disabled {
+  background: #cccccc;
+}

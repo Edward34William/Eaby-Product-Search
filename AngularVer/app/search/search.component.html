@@ -1,0 +1,147 @@
+<div class="container my-4 w-100 rounded" style="background: #1F1F25 !important">
+  <h2 class="font-weight-bold text-center text-white py-4">Product Search</h2>
+
+  <form [formGroup]="form" (ngSubmit)="onSubmit(form)" name="searchForm" method="GET" (mouseenter)="onHover()" autocomplete="off">
+
+    <div class="form-group text-white row">
+      <label for="InputKeyword" class="offset-lg-1 col-lg-2 col-form-label">Keyword<span class="text-danger">*</span></label>
+      <div class="col-lg-7 px-2">
+        <input type="text" class="form-control" name="keyword" id="InputKeyword" placeholder="Enter Product Name(eg. iPhone 8)"
+          formControlName="keyword"
+          required (keydown)="onKeyWordDown()" autocomplete="off">
+        <div *ngIf="form.get('keyword').invalid && (form.get('keyword').dirty || form.get('keyword').touched)">
+          <small *ngIf="form.get('keyword').errors.required" class="text-danger">
+            Please enter a keyword.
+          </small>
+        </div>
+      </div>
+    </div>
+
+
+    <div class="form-group text-white row">
+
+      <label for="InputCategory" class="offset-lg-1 col-lg-2 col-form-label">Category</label>
+      <div class="col-lg-3 px-2">
+        <select name="category" class="form-control" formControlName="category">
+          <option id="all-opt" value="-1">All Categories</option>
+          <option value="550">Art</option>
+          <option value="2984">Baby</option>
+          <option value="267">Books</option>
+          <option value="11450">Clothing, Shoes & Accessories</option>
+          <option value="58058">Computers/Tablets & Networking</option>
+          <option value="26395">Health & Beauty</option>
+          <option value="11233">Music</option>
+          <option value="1249">Video Games & Consoles</option>
+        </select>
+      </div>
+    </div>
+
+
+    <div class="form-group text-white row">
+      <label for="InputCondition" class="offset-lg-1 col-lg-2  col-form-label">Condition</label>
+      <div class="col-lg-7 px-2" formGroupName="condition">
+        <div class="form-check form-check-inline">
+          <input class="form-check-input" type="checkbox" id="c_new" value="New" name="new" formControlName="new">
+          <label class="form-check-label" for="new">New</label>
+        </div>
+        <div class="form-check form-check-inline">
+          <input class="form-check-input" type="checkbox" id="used" value="Used" name="used" formControlName="used">
+          <label class="form-check-label" for="used">Used</label>
+        </div>
+        <div class="form-check form-check-inline">
+          <input class="form-check-input" type="checkbox" id="unsp" value="Unspecified" name="unspecified"
+            formControlName="unspecified">
+          <label class="form-check-label" for="unsp">Unspecified</label>
+        </div>
+      </div>
+    </div>
+
+
+    <div class="form-group text-white row">
+      <label for="InputShipping" class="offset-lg-1 col-lg-2  col-form-label">Shipping Options</label>
+      <div class="col-lg-7 px-2" formGroupName="shipping">
+        <div class="form-check form-check-inline">
+          <input class="form-check-input" type="checkbox" id="local" value="local" name="localpickup" formControlName="localpickup">
+          <label class="form-check-label" for="local">Local Pickup</label>
+        </div>
+        <div class="form-check form-check-inline">
+          <input class="form-check-input" type="checkbox" id="free" value="free" name="freeshipping" formControlName="freeshipping">
+          <label class="form-check-label" for="free">Free Shipping</label>
+        </div>
+      </div>
+    </div>
+
+
+    <div class="form-group text-white row">
+      <label for="InputDistance" class="offset-lg-1 col-lg-2 col-form-label">Distance (Miles)</label>
+      <div class="col-lg-3 px-2">
+        <input type="text" class="form-control" id="InputDistance" name="distance" placeholder="10" formControlName="distance">
+      </div>
+    </div>
+
+
+    <div class="form-group text-white row">
+      <label for="InputLocation" class="offset-lg-1 col-lg-2 col-form-label">From<span class="text-danger">*</span></label>
+      <div class="col-lg-7 px-2 justify-content-center">
+        <div class="form-check my-1">
+          <input class="form-check-input" type="radio" name="InputLocationRadios" id="currentRadios" value="current"
+            checked formControlName="InputLocationRadios" (click)="onCurrent()">
+          <label class="form-check-label" for="current">
+            Current Location
+          </label>
+        </div>
+        <div class="form-check my-1">
+          <input class="form-check-input" type="radio" name="InputLocationRadios" id="customizedRadios" value="customized"
+            formControlName="InputLocationRadios" (click)="onCustom()">
+          <label class="form-check-label" for="customized">
+            Other. Please specify zip code:
+          </label>
+        </div>
+        <div class="row" (keyup)="onZipcodeUp($event)">
+          <mat-form-field class="col">
+            <input type="text" class="form-control text-dark" id="InputZipcode" aria-label="Number" matInput formControlName="cus_zipcode"
+              [matAutocomplete]="auto" name="cus_zipcode" required (keydown)="onZipcodeDown()" autocomplete="off">
+            <mat-autocomplete #auto="matAutocomplete">
+              <mat-option *ngFor="let option of options" [value]="option">
+                {{option}}
+              </mat-option>
+            </mat-autocomplete>
+          </mat-form-field>
+        </div>
+
+        <div *ngIf="(form.get('cus_zipcode').invalid && (form.get('cus_zipcode').dirty || form.get('cus_zipcode').touched))">
+          <small *ngIf="form.get('cus_zipcode').errors.required && (!form.get('cus_zipcode').isDisabled) && form.get('cus_zipcode').touched"
+            class="text-danger">
+            Please enter a zip code.
+          </small>
+        </div>
+
+      </div>
+    </div>
+
+    <div class="form-group text-white row">
+      <div class="col-lg-7 px-2">
+        <input type="hidden" class="form-control" name="local_zipcode" id="local_zipcode" placeholder="local_zipcode"
+          formControlName="local_zipcode"
+          value="{{localZip}}">
+      </div>
+    </div>
+
+    <div class="form-group text-white row">
+      <div class="offset-lg-1 col-12 d-flex">
+          <button #search type="submit" id="search-btn" class="btn btn-light mb-3 mr-4 d-flex" [disabled]="isDisabled()"><i class="material-icons mr-1">search</i>Search</button>
+          <button #reset type="button" id="clean-btn" class="btn btn-light mb-3 d-flex" (click)="onReset()"><i class="material-icons mr-1">clear_all</i>Clear</button>
+      </div>
+    </div>
+
+  </form>
+  <!-- <pre class="text-white">Form Value: {{ form.value | json}}</pre>
+  <p class="text-white">
+    <br>
+    Form Status: {{ form.status }}
+  </p> -->
+</div>
+
+<div #presentDiv>
+  <app-present #present></app-present>
+</div>

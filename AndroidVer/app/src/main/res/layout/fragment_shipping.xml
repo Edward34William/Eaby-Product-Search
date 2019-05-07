@@ -1,0 +1,451 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/frameLayout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/backgroundGray"
+    tools:context=".Shipping">
+
+    <android.support.constraint.ConstraintLayout
+        android:id="@+id/progressBar_shipping"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:visibility="visible">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:text="Searching Product..."
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/progressBar" />
+
+        <ProgressBar
+            android:id="@+id/progressBar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_centerVertical="true"
+            android:layout_marginStart="8dp"
+            android:layout_marginLeft="8dp"
+            android:layout_marginTop="8dp"
+            android:layout_marginEnd="8dp"
+            android:layout_marginRight="8dp"
+            android:minWidth="50dp"
+            android:minHeight="50dp"
+            app:layout_anchorGravity="top|center"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+    </android.support.constraint.ConstraintLayout>
+
+    <android.support.v4.widget.NestedScrollView
+        android:id="@+id/nestscrollview_shipping"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:visibility="visible">
+
+        <android.support.constraint.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <TextView
+                android:id="@+id/globalShippingLabel"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="24dp"
+                android:text="Global Shipping"
+                android:textColor="@android:color/background_dark"
+                android:textSize="14sp"
+                app:layout_constraintStart_toStartOf="@+id/ShippingLabel"
+                app:layout_constraintTop_toBottomOf="@+id/shipping" />
+
+            <TextView
+                android:id="@+id/globalShipping"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="32dp"
+                android:layout_marginLeft="32dp"
+                android:layout_marginEnd="24dp"
+                android:layout_marginRight="24dp"
+                android:text="default"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@+id/ShippingLabel"
+                app:layout_constraintTop_toTopOf="@+id/globalShippingLabel" />
+
+            <View
+                android:id="@+id/ShippingHR"
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_marginStart="8dp"
+                android:layout_marginLeft="8dp"
+                android:layout_marginTop="16dp"
+                android:layout_marginEnd="8dp"
+                android:layout_marginRight="8dp"
+                android:background="?attr/colorButtonNormal"
+                android:tag="shippingLabel"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/feedback" />
+
+            <View
+                android:id="@+id/ReturnHR"
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_marginStart="8dp"
+                android:layout_marginLeft="8dp"
+                android:layout_marginTop="24dp"
+                android:layout_marginEnd="8dp"
+                android:layout_marginRight="8dp"
+                android:background="?attr/colorButtonNormal"
+                android:tag="returnLabel"
+                android:visibility="visible"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="1.0"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/condition" />
+
+            <TextView
+                android:id="@+id/soldByLabel"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:layout_marginLeft="8dp"
+                android:tag="soldLabel"
+                android:text="Sold By"
+                android:textColor="@android:color/background_dark"
+                android:textStyle="bold"
+                app:layout_constraintBottom_toBottomOf="@+id/soldByIcon"
+                app:layout_constraintStart_toEndOf="@+id/soldByIcon"
+                app:layout_constraintTop_toTopOf="@+id/soldByIcon" />
+
+            <TextView
+                android:id="@+id/ShippingLabel"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:layout_marginLeft="8dp"
+                android:tag="shippingLabel"
+                android:text="Shipping Info"
+                android:textColor="@android:color/background_dark"
+                android:textStyle="bold"
+                app:layout_constraintBottom_toBottomOf="@+id/ShippingIcon"
+                app:layout_constraintStart_toEndOf="@+id/ShippingIcon"
+                app:layout_constraintTop_toTopOf="@+id/ShippingIcon" />
+
+            <TextView
+                android:id="@+id/ReturnLabel"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:layout_marginLeft="8dp"
+                android:tag="returnLabel"
+                android:text="Return Policy"
+                android:textColor="@android:color/background_dark"
+                android:textStyle="bold"
+                android:visibility="visible"
+                app:layout_constraintBottom_toBottomOf="@+id/ReturnIcon"
+                app:layout_constraintStart_toEndOf="@+id/ReturnIcon"
+                app:layout_constraintTop_toTopOf="@+id/ReturnIcon" />
+
+            <ImageView
+                android:id="@+id/soldByIcon"
+                android:layout_width="24dp"
+                android:layout_height="24dp"
+                android:layout_marginStart="8dp"
+                android:layout_marginLeft="8dp"
+                android:layout_marginTop="16dp"
+                android:src="@drawable/truck"
+                android:tag="soldLabel"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/storeName"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="63dp"
+                android:layout_marginLeft="63dp"
+                android:layout_marginEnd="24dp"
+                android:layout_marginRight="24dp"
+                android:text="default"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@+id/soldByLabel"
+                app:layout_constraintTop_toTopOf="@+id/storeNameLabel" />
+
+            <TextView
+                android:id="@+id/shipping"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="32dp"
+                android:layout_marginLeft="32dp"
+                android:layout_marginEnd="24dp"
+                android:layout_marginRight="24dp"
+                android:text="default"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="1.0"
+                app:layout_constraintStart_toEndOf="@+id/ShippingLabel"
+                app:layout_constraintTop_toTopOf="@+id/shippingCostLabel" />
+
+            <TextView
+                android:id="@+id/storeNameLabel"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="24dp"
+                android:text="Store Name"
+                android:textColor="@android:color/background_dark"
+                android:textSize="14sp"
+                app:layout_constraintStart_toStartOf="@+id/soldByLabel"
+                app:layout_constraintTop_toBottomOf="@+id/soldByLabel" />
+
+            <TextView
+                android:id="@+id/shippingCostLabel"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="24dp"
+                android:text="Shipping Cost"
+                android:textColor="@android:color/background_dark"
+                android:textSize="14sp"
+                app:layout_constraintStart_toStartOf="@+id/ShippingLabel"
+                app:layout_constraintTop_toBottomOf="@+id/ShippingLabel" />
+
+            <com.wssholmes.stark.circular_score.CircularScoreView
+                android:id="@+id/popularity"
+                android:layout_width="24dp"
+                android:layout_height="24dp"
+                android:layout_marginStart="63dp"
+                android:layout_marginLeft="63dp"
+                app:layout_constraintStart_toEndOf="@+id/soldByLabel"
+                app:layout_constraintTop_toTopOf="@+id/popularityLabel"
+                app:score="50"
+                app:setBackgroundColor="@color/backgroundGray"
+                app:setPrimaryColor="#FD572F"
+                app:setSecondaryColor="@color/colorAccent"
+                app:setTextColor="@color/user_score_background" />
+
+            <ImageView
+                android:id="@+id/ShippingIcon"
+                android:layout_width="24dp"
+                android:layout_height="24dp"
+                android:layout_marginStart="8dp"
+                android:layout_marginLeft="8dp"
+                android:layout_marginTop="16dp"
+                android:src="@drawable/ferry"
+                android:tag="shippingLabel"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/ShippingHR" />
+
+            <TextView
+                android:id="@+id/feedBackScoreLabel"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="24dp"
+                android:text="Feedback Score"
+                android:textColor="@android:color/background_dark"
+                app:layout_constraintStart_toStartOf="@+id/soldByLabel"
+                app:layout_constraintTop_toBottomOf="@+id/storeName" />
+
+            <TextView
+                android:id="@+id/feedbackScore"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="63dp"
+                android:layout_marginLeft="63dp"
+                android:layout_marginEnd="24dp"
+                android:layout_marginRight="24dp"
+                android:text="default"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@+id/soldByLabel"
+                app:layout_constraintTop_toTopOf="@+id/feedBackScoreLabel" />
+
+            <TextView
+                android:id="@+id/popularityLabel"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="24dp"
+                android:text="Popularity"
+                android:textColor="@android:color/background_dark"
+                app:layout_constraintStart_toStartOf="@+id/soldByLabel"
+                app:layout_constraintTop_toBottomOf="@+id/feedbackScore" />
+
+            <TextView
+                android:id="@+id/feedbackLabel"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="24dp"
+                android:text="Feedback"
+                android:textColor="@android:color/background_dark"
+                app:layout_constraintStart_toStartOf="@+id/soldByLabel"
+                app:layout_constraintTop_toBottomOf="@+id/popularity" />
+
+            <ImageView
+                android:id="@+id/feedback"
+                android:layout_width="24dp"
+                android:layout_height="24dp"
+                android:layout_marginStart="63dp"
+                android:layout_marginLeft="63dp"
+                app:layout_constraintStart_toEndOf="@+id/soldByLabel"
+                app:layout_constraintTop_toTopOf="@+id/feedbackLabel" />
+
+            <TextView
+                android:id="@+id/handlingTimeLabel"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="24dp"
+                android:text="Handling Time"
+                android:textColor="@android:color/background_dark"
+                app:layout_constraintStart_toStartOf="@+id/ShippingLabel"
+                app:layout_constraintTop_toBottomOf="@+id/globalShipping" />
+
+            <TextView
+                android:id="@+id/handlingTime"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="32dp"
+                android:layout_marginLeft="32dp"
+                android:layout_marginEnd="24dp"
+                android:layout_marginRight="24dp"
+                android:text="default"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@+id/ShippingLabel"
+                app:layout_constraintTop_toTopOf="@+id/handlingTimeLabel" />
+
+            <TextView
+                android:id="@+id/condition"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="32dp"
+                android:layout_marginLeft="32dp"
+                android:layout_marginEnd="24dp"
+                android:layout_marginRight="24dp"
+                android:text="default"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@+id/ShippingLabel"
+                app:layout_constraintTop_toTopOf="@+id/conditionLabel" />
+
+            <TextView
+                android:id="@+id/conditionLabel"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="24dp"
+                android:text="Condition"
+                android:textColor="@android:color/background_dark"
+                app:layout_constraintStart_toStartOf="@+id/ShippingLabel"
+                app:layout_constraintTop_toBottomOf="@+id/handlingTime" />
+
+            <ImageView
+                android:id="@+id/ReturnIcon"
+                android:layout_width="24dp"
+                android:layout_height="24dp"
+                android:layout_marginStart="8dp"
+                android:layout_marginLeft="8dp"
+                android:layout_marginTop="16dp"
+                android:src="@drawable/dump_truck"
+                android:tag="returnLabel"
+                android:visibility="visible"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/ReturnHR" />
+
+            <TextView
+                android:id="@+id/policyLabel"
+                android:layout_width="wrap_content"
+                android:layout_height="17dp"
+                android:layout_marginTop="24dp"
+                android:text="Policy"
+                android:textColor="@android:color/background_dark"
+                app:layout_constraintStart_toStartOf="@+id/ReturnLabel"
+                app:layout_constraintTop_toBottomOf="@+id/ReturnLabel" />
+
+            <TextView
+                android:id="@+id/policy"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="32dp"
+                android:layout_marginLeft="32dp"
+                android:layout_marginEnd="24dp"
+                android:layout_marginRight="24dp"
+                android:text="default"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@+id/ReturnLabel"
+                app:layout_constraintTop_toTopOf="@+id/policyLabel" />
+
+            <TextView
+                android:id="@+id/returnWithinLabel"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="24dp"
+                android:text="Returns within"
+                android:textColor="@android:color/background_dark"
+                app:layout_constraintStart_toStartOf="@+id/ReturnLabel"
+                app:layout_constraintTop_toBottomOf="@+id/policy" />
+
+            <TextView
+                android:id="@+id/returnWithin"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="32dp"
+                android:layout_marginLeft="32dp"
+                android:layout_marginEnd="24dp"
+                android:layout_marginRight="24dp"
+                android:text="default"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@+id/ReturnLabel"
+                app:layout_constraintTop_toTopOf="@+id/returnWithinLabel" />
+
+            <TextView
+                android:id="@+id/refundModeLabel"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="24dp"
+                android:text="Refund Mode"
+                android:textColor="@android:color/background_dark"
+                app:layout_constraintStart_toStartOf="@+id/ReturnLabel"
+                app:layout_constraintTop_toBottomOf="@+id/returnWithin" />
+
+            <TextView
+                android:id="@+id/refundMode"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="32dp"
+                android:layout_marginLeft="32dp"
+                android:layout_marginEnd="24dp"
+                android:layout_marginRight="24dp"
+                android:text="default"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@+id/ReturnLabel"
+                app:layout_constraintTop_toTopOf="@+id/refundModeLabel" />
+
+            <TextView
+                android:id="@+id/shippedByLabel"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="24dp"
+                android:layout_marginBottom="24dp"
+                android:text="Shipped by"
+                android:textColor="@android:color/background_dark"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toStartOf="@+id/ReturnLabel"
+                app:layout_constraintTop_toBottomOf="@+id/refundMode" />
+
+            <TextView
+                android:id="@+id/shippedBy"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="32dp"
+                android:layout_marginLeft="32dp"
+                android:layout_marginEnd="24dp"
+                android:layout_marginRight="24dp"
+                android:text="default"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@+id/ReturnLabel"
+                app:layout_constraintTop_toTopOf="@+id/shippedByLabel" />
+
+        </android.support.constraint.ConstraintLayout>
+    </android.support.v4.widget.NestedScrollView>
+
+</FrameLayout>

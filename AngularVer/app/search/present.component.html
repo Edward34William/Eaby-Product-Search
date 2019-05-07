@@ -1,0 +1,12 @@
+<div class="navbar d-flex justify-content-center">
+  <ul class="nav nav-pills">
+    <li *ngFor="let tab of tabs; let i = index" class="nav-item">
+      <a class="nav-link text-dark" [ngClass]="(tab.isActive)?'active':''" routerLink="/list" href="#"
+        (click)="this.toogleTab(tab.index);false" id="tab-{{i}}">{{tab.name}}</a>
+    </li>
+  </ul>
+</div>
+
+<div [@anime]="returnRouterState(out)" id="router-div" style="height: 400px;" class="mb-5">
+  <router-outlet #out="outlet"></router-outlet>
+</div>

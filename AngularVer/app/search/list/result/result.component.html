@@ -1,0 +1,79 @@
+<div *ngIf="(!isLoad);else inProgress">
+
+  <div class="row d-flex justify-content-end py-4">
+    <button routerLink="/pro-detail" class="btn btn-light d-flex" [disabled]="isDisable()">Detail
+      <i class="material-icons ml-1">arrow_forward_ios</i>
+    </button>
+  </div>
+
+  <div *ngIf="data.sampleList.length <= 0" class="alert alert-warning mb-4" role="alert">
+    No Records.
+  </div>
+
+  <div *ngIf="data.sampleList.length > 0" id="data-table" class="p-0 m-0">
+    <table class="table table-striped table-dark table-hover">
+      <thead>
+        <tr>
+          <th *ngFor="let header of headers" scope="col">{{header}}</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let sample of data.sampleList; let i = index" [ngClass]="(sample.isSelect)?'table-dark':''">
+          <td *ngIf="i < (lastIndex + ItemPrePage) && i >= lastIndex">{{sample.id}}</td>
+          <td *ngIf="i < (lastIndex + ItemPrePage) && i >= lastIndex">
+            <a *ngIf="sample.image; else imageDiv" href="{{sample.image}}" target="_blank">
+              <img src="{{sample.image}}" alt="" height="100px" width="100px">        
+            </a>
+            <ng-template #imageDiv>
+              <div height="100px" width="100px">N/A</div>
+            </ng-template>
+          </td>
+          <td *ngIf="i < (lastIndex + ItemPrePage) && i >= lastIndex" style="min-width: 375px">
+            <a routerLink="/pro-detail" mat-raised #tooltip="matTooltip" matTooltip="{{sample.title}}"
+              matTooltipPosition="below" href="#"
+              (click)="clickTitle(sample);false">{{(sample.title)?(this.titleProcess(sample.title)):'N/A'}}</a>
+          </td>
+          <td *ngIf="i < (lastIndex + ItemPrePage) && i >= lastIndex">{{(sample.price)?('$' + sample.price):'N/A'}}
+          </td>
+          <td *ngIf="i < (lastIndex + ItemPrePage) && i >= lastIndex" style="min-width: 125px">
+            {{(sample.shipping)?((sample.shipping == '0.00')?'Free Shipping':('$'+ sample.shipping)):'N/A'}}</td>
+          <!--need tweak-->
+          <td *ngIf="i < (lastIndex + ItemPrePage) && i >= lastIndex">{{(sample.zip)?(sample.zip):'N/A'}}</td>
+          <td *ngIf="i < (lastIndex + ItemPrePage) && i >= lastIndex">{{(sample.seller)?(sample.seller):'N/A'}}</td>
+          <td *ngIf="i < (lastIndex + ItemPrePage) && i >= lastIndex" style="min-width: 100px">
+            <button class="btn btn-light p-auto" (click)="this.wishClick(sample.id, sample.itemId);false">
+              <i *ngIf="(sample.isWish); else elseWish" class="material-icons cart-yellow">remove_shopping_cart</i>
+              <ng-template #elseWish>
+                <i class="material-icons">add_shopping_cart</i>
+              </ng-template>
+            </button>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+
+    <div class="row d-flex justify-content-center py-2">
+      <nav aria-label="Page navigation example">
+        <ul class="pagination">
+          <li class="page-item" [ngClass]="(isFirst)?'disabled':''">
+            <a class="page-link" href="#" (click)="prePage(1);false"><span aria-hidden="true">&laquo;
+              </span>Previous</a>
+          </li>
+          <li *ngFor="let page of pages" class="page-item" [ngClass]="(page.active)?'active':''"><a href="#"
+              class="page-link" (click)="this.jumpPage(page.page);false">{{page.page}}</a></li>
+          <li class="page-item" [ngClass]="(isLast)?'disabled':''">
+            <a class="page-link" href="#" (click)="nexPage(1);false">Next<span aria-hidden="true"> &raquo;</span></a>
+          </li>
+        </ul>
+      </nav>
+    </div>
+  </div>
+
+</div>
+
+<ng-template #inProgress>
+  <div class="progress mt-5">
+    <div class="progress-bar progress-bar-striped progress-bar-animated" role="progressbar" aria-valuenow="75"
+      aria-valuemin="0" aria-valuemax="100" style="width: 50%"></div>
+  </div>
+</ng-template>

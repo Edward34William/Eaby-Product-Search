@@ -1,0 +1,46 @@
+<resources>
+    <string name="app_name">Product Search</string>
+    <string name="keyword">Keyword</string>
+    <string name="enter_keyword">Enter Keyword</string>
+    <string name="category">Category</string>
+    <string name="enable_nearby_search">Enable Nearby Search</string>
+    <string name="free_shipping">Free Shipping</string>
+    <string name="local_pickup">Local Pickup</string>
+    <string name="shipping_opitons">Shipping Opitons</string>
+    <string name="check_unspecified">Unspecified</string>
+    <string name="check_used">Used</string>
+    <string name="check_new">New</string>
+    <string name="condition">Condition</string>
+    <string name="search">Search</string>
+    <string name="clear">Clear</string>
+    <string name="miles">Miles from</string>
+    <string name="current_location">Current Location</string>
+    <string name="from">From</string>
+    <string name="zipcode">zipcode</string>
+    <string-array name="cat">
+        <item>All</item>
+        <item>Art</item>
+        <item>Baby</item>
+        <item>Books</item>
+        <item>Clothing, Shoes &#38; Accessories</item>
+        <item>Computers/Tablets &#38; Networking</item>
+        <item>Health &#38; Beauty</item>
+        <item>Music</item>
+        <item>Video Games &#38; Consoles</item>
+    </string-array>
+    <string-array name="sort_cart">
+        <item>Default</item>
+        <item>Name</item>
+        <item>Price</item>
+        <item>Days</item>
+    </string-array>
+    <string-array name="sort_method">
+        <item>Ascending</item>
+        <item>Descending</item>
+    </string-array>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="title_activity_result">Result</string>
+    <string name="exampleTitle">APPLE IPHONE X 64GB FACTORY UNLOCKED AAAAAAAAAAAAAAAFFFFFFFFFFFFFFFFFAAAAAAAAAAFFFFFFFFFFFFFFFFFAAAAAAAAAAFFFFFFFFFFFFFFFFFAAAAAAAAAAFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFAAAAAA</string>
+</resources>
