@@ -1,8 +1,7 @@
 # Eaby Product Search
-
 PHP integrated web page, Angular7 based web application, and Android (adk28) Java application for Ebay product search.
 
-_Lineng Cao_
+__Lineng Cao__
 
 ## PHP Verison
 - PHP7 combined with Html5
@@ -15,13 +14,16 @@ _Lineng Cao_
 - Featured with autocomplete, ip detected, group sorting and offline cart list.
 
 ### Screenshots
-_Detail_
+__Detail__
+
 ![](./screenshots/angular/detail-opt.gif)
 
-_Search_
+__Search__
+
 ![](./screenshots/angular/search-opt.gif)
 
-_Wish List Feature_
+__Wish List Feature__
+
 ![](./screenshots/angular/wish-opt.gif)
 
 ### Demo
@@ -33,18 +35,22 @@ _Wish List Feature_
 - Featured with autocomplete, ip detected, simliar group sorting, cache offline wish list
 
 ### Screenshots
-_Launch_
+__Launch__
+
 ![](./screenshots/android/launch-opt.gif)
 
-_Detail_
+__Detail__
+
 ![](./screenshots/android/detail-opt.gif)
 
-_Search_
+__Search__
+
 ![](./screenshots/android/search-opt.gif)
 
 ![](./screenshots/android/search2-opt.gif)
 
-_Wish List Feature_
+__Wish List Feature__
+
 ![](./screenshots/android/wish_list-opt.gif)
 
 ### Download Demo
