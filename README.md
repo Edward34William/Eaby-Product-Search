@@ -1,7 +1,7 @@
 # Eaby Product Search
 PHP integrated web page, Angular7 based web application, and Android (adk28) Java application for Ebay product search.
 
-__Lineng Cao__
+__Lineng Cao__, _USC CSCI 571 2019SP_
 
 ## PHP Verison
 - PHP7 combined with Html5

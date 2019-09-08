@@ -1,0 +1,337 @@
+* {
+    margin: 0;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+    font-family: -apple-system, 'Segoe UI', 'Roboto', 'Open Sans', 'Helvetica Neue', sans-serif;
+    scroll-behavior: smooth;
+}
+
+html {
+    font-size: 62.5%;
+    overflow: auto;
+}
+
+body {
+    background: #FFFFFF;
+    border: 0;
+    padding: 0;
+    margin: 0;
+    top: 0;
+    bottom: 0;
+    width: 100vw;
+    display: block;
+    position: absolute;
+    overflow-y: hidden;
+}
+
+/* body {
+    scrollbar-width: none;
+    -ms-overflow-style: none;
+    overflow: -moz-scrollbars-none;
+}
+
+body::-webkit-scrollbar {
+    display: none;
+} */
+
+div#warp {
+    top: 0;
+    position: absolute;
+    height: 1200px;
+    width: 100%;
+    perspective: 650px;
+    transform-style: preserve-3d;
+    overflow-x: hidden;
+    overflow-y: auto;
+}
+
+/* **************************************** */
+
+a {
+    text-decoration: none;
+}
+
+.bold {
+    font-weight: bold;
+}
+
+/* *************************************** */
+
+.flex {
+    -webkit-box-flex: 1;
+    -ms-flex: 1;
+    flex: 1;
+}
+
+.flex-between {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.flex-arround {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.flex-row {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.flex-col {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.center {
+    justify-content: center;
+    text-align: center;
+}
+
+/* fade-layer */
+
+/* ********************************8 */
+
+.fade-layer {
+    display: block;
+    position: relative;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 700px;
+    z-index: 3;
+    opacity: 0.9;
+}
+
+.fade-layer .div-more {
+    position: fixed;
+    height: 70px;
+    width: 50px;
+    left: 50%;
+}
+
+.fade-layer .btn-more-svg {
+    position: relative;
+    opacity: 0.9;
+    height: 25px;
+    width: 50px;
+    left: -25px;
+}
+
+.btn-more-svg line {
+    stroke: white;
+    stroke-width: 2.5px;
+}
+
+.layer#layer-fade {
+    transform: translateY(1470px) translateZ(-400px) scale(1.5);
+}
+
+/* grid-first */
+
+/* *************************************** */
+
+.grid-first,
+.grid-third {
+    position: relative;
+    height: 1000px;
+    background: none;
+    color: white;
+    z-index: 10;
+}
+
+/* nav */
+
+/* ************************* */
+
+.nav {
+    margin: 0;
+    width: 1200px;
+    padding: 0px 100px 0px 100px;
+    max-height: 120px;
+}
+
+.nav #header {
+    font-family: 'Sarala';
+    font-size: 3.5rem;
+    letter-spacing: 0.65rem;
+}
+
+.nav ul li {
+    display: inline-block;
+    list-style: none;
+    font-family: 'Sarala';
+    font-size: 1.2rem;
+    letter-spacing: 0.3rem;
+    margin: 12.5px;
+}
+
+.title-box {
+    padding-top: 160px;
+}
+
+.title-box a#title {
+    font-size: 11rem;
+    font-family: 'Hind';
+    line-height: 11rem;
+}
+
+.title-box p {
+    font-size: 2.3rem;
+    width: 645px;
+    padding-top: 65px;
+    line-height: 3.7rem;
+    font-family: 'Segoe UI', 'Roboto', sans-serif;
+    letter-spacing: 0.1rem;
+}
+
+.title-box button {
+    border: none;
+    background: none;
+    padding: 0;
+    font-family: 'Sarala';
+}
+
+.title-box .btn-learn {
+    padding: 20px 34px 20px 34px;
+    margin-top: 35px;
+    font-size: 1.2rem;
+    letter-spacing: 0.2rem;
+    background: white;
+}
+
+/* grid-second */
+
+/* *************************************** */
+
+.grid-second {
+    padding: 90px;
+    padding-bottom: 85px;
+    background: white;
+}
+
+.grid-second .grid-p {
+    margin: 45px 0px 35px 0px;
+    width: 560px;
+    font-size: 1.5rem;
+    color: #5B5B5B;
+    line-height: 2.4rem;
+}
+
+#grid-1 {
+    background: url(./img/snow2.jpg);
+    background-repeat: none;
+    background-size: cover;
+    background-position: center;
+}
+
+#grid-2 {
+    background: url(./img/snow3.jpg);
+    background-repeat: none;
+    background-size: cover;
+    background-position: center;
+}
+
+#grid-3 {
+    background: url(./img/snow4.jpg);
+    background-repeat: none;
+    background-size: cover;
+    background-position: center;
+}
+
+#grid-4 {
+    background: url(./img/snow5.jpg);
+    background-repeat: none;
+    background-size: cover;
+    background-position: center;
+}
+
+.grid-second .grid-m div {
+    margin: 10px;
+    height: 495px;
+    width: 495px;
+}
+
+/* grid-third */
+
+/* ************************************* */
+
+.grid-third {
+    color: white;
+    height: 1000px;
+}
+
+.grid-third p {
+    width: 650px;
+    font-family: 'Open Sans';
+    font-size: 2.2rem;
+    line-height: 35px;
+}
+
+/*  background */
+
+/* ************************************** */
+
+.layer {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    margin: 0;
+    padding: 0;
+    /* max-width: 1205px; */
+}
+
+.layer#layer-top {
+    transform: translateZ(0);
+    z-index: 1;
+    position: fixed;
+    top: 0;
+}
+
+.layer#layer-bottom {
+    transform: translateZ(-900px) scale(2.7);
+    z-index: -1;
+}
+
+div#background-1 {
+    height: 900px;
+    background-image: linear-gradient(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.15)), url(./img/snow1.jpg);
+    background-size: 135% !important;
+    background-position:    -175px 0px !important;
+}
+
+div#background-2 {
+    margin-top: 30px;
+    height: 980px;
+    background-image: linear-gradient(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.15)), url(./img/snow6.jpg);
+}
+
+div#background-1,
+div#background-2 {
+    background-size: cover;
+    background-repeat: none;
+    background-position: center 2px;
+
+}
+
+
+/* grid four */
+/* ********************************************** */
+
+.grid-four {
+    transition: all 1.5s;
+    background: white;
+    height: 500px;
+}
+
+.background-div {
+    min-width: 1065px;
+    top: 70px;
+    position: absolute;
+}
