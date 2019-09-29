@@ -8,10 +8,18 @@ __Lineng Cao__, _USC CSCI 571 2019SP_
 - All API called from PHP server side
 
 ## Angular Verison
-- Entire Angular7 with Bootstrap powered FrontEnd website, Using reactive form and angular materials principles.
-- Nodejs & Express based BackEnd serving on aws and Azure.
-- Special RestAPIs were created for supporting all requests from the frontend filled with error handling
+- Entire Angular7 with Bootstrap powered FrontEnd website, Using reactive form and angular materials principles.(`@angular/ng-bootstrap`, `@angular/material`, `angular-svg-round-progressbar`).
+- Nodejs & Express based BackEnd serving on AWS EC2 and Azure.
+- Special Restful APIs were created for supporting all requests from the frontend filled with error handling.
 - Featured with autocomplete, ip detected, group sorting and offline cart list.
+
+## BackEnd Restful APIs
+- [Zipcode IP Autocomplete](http://vvvvvincecccchw8.us-west-1.elasticbeanstalk.com/api/ip-json/?startsWith=900)
+- [Google Image Search](http://vvvvvincecccchw8.us-west-1.elasticbeanstalk.com/api/google-img?v=1&productTitle=iphone)
+- [eBay Product Search](http://vvvvvincecccchw8.us-west-1.elasticbeanstalk.com/api/search/?keyword=iphone&buyerPostalCode=90007&MaxDistance=100&FreeShippingOnly=true&LocalPickupOnly=true)
+- [eBay Project Detail Search](http://vvvvvincecccchw8.us-west-1.elasticbeanstalk.com/api/item-detail/?itemId=283622107255)
+- [eBay Similar Search](http://vvvvvincecccchw8.us-west-1.elasticbeanstalk.com/api/similar/?itemId=283622107255)
+- 
 
 ### Screenshots
 __Detail__
