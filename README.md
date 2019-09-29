@@ -19,7 +19,6 @@ __Lineng Cao__, _USC CSCI 571 2019SP_
 - [eBay Product Search](http://vvvvvincecccchw8.us-west-1.elasticbeanstalk.com/api/search/?keyword=iphone&buyerPostalCode=90007&MaxDistance=100&FreeShippingOnly=true&LocalPickupOnly=true)
 - [eBay Project Detail Search](http://vvvvvincecccchw8.us-west-1.elasticbeanstalk.com/api/item-detail/?itemId=283622107255)
 - [eBay Similar Search](http://vvvvvincecccchw8.us-west-1.elasticbeanstalk.com/api/similar/?itemId=283622107255)
-- 
 
 ### Screenshots
 __Detail__
