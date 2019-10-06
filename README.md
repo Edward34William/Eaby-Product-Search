@@ -61,5 +61,5 @@ __Wish List Feature__
 ![](./screenshots/android/wish_list-opt.gif)
 
 ### Download Demo
-[Apk Download](https://gitlab.com/vcec/eaby-product-search/raw/master/AndroidVer/apk/product-search-debug-v1.apk)
+[Apk Download](./AndroidVer/apk/product-search-debug-v1.apk)
 
