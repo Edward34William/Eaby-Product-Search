@@ -196,7 +196,7 @@
                 <?php else: ?> 
                     
                     <?php
-                        $APPID = "LinengCa-vvvvince-XXXXXXXXXXXXXXXXXXXXXX"; //your App-ID
+                        $APPID = "LinengCa-vvvvince-PRD-160c321e5-3540d155"; //your App-ID
                         $url = "http://svcs.ebay.com/services/search/FindingService/v1";
                         $url .= "?OPERATION-NAME=findItemsAdvanced";
                         $url .= "&SERVICE-VERSION=1.0.0";
@@ -407,7 +407,7 @@
                     <?php endif;?>
                 <?php endif;?>
             <?php else:
-                $APPID = "LinengCa-vvvvince-XXXXXXXXXXXXXXXXXXXXXX"; //your AppID
+                $APPID = "LinengCa-vvvvince-PRD-160c321e5-3540d155"; //your AppID
 
                 //get detail
                 $src = "http://open.api.ebay.com/shopping?callname=GetSingleItem&responseencoding=JSON&appid=".$APPID."&siteid=0&version=967&ItemID=".$_POST['itemId']."&IncludeSelector=Description,Details,ItemSpecifics";
