@@ -7,7 +7,7 @@ __Lineng Cao__
 - PHP7 combined with Html5
 - All API called from PHP server side
 
-## Angular Verison
+## [Angular Verison](http://aws.vince-amazing.com/search-product)
 - Entire Angular7 with Bootstrap powered FrontEnd website, Using reactive form and angular materials principles.(`@angular/ng-bootstrap`, `@angular/material`, `angular-svg-round-progressbar`).
 - Nodejs & Express based BackEnd serving on AWS EC2 and Azure.
 - Special Restful APIs were created for supporting all requests from the frontend filled with error handling.
@@ -33,10 +33,7 @@ __Wish List Feature__
 
 ![](./screenshots/angular/wish-opt.gif)
 
-### Demo
-[Demo Page](http://aws.vince-amazing.com/search-product)
-
-## Android Verison
+## [Android Verison](https://github.com/vincecao/Eaby-Product-Search/raw/master/AndroidVer/apk/product-search-debug-v1.apk)
 - Nodejs & Express based BackEnd serving on aws and Azure.
 - Using recyclerview, fragment and data module.
 - Featured with autocomplete, ip detected, simliar group sorting, cache offline wish list
