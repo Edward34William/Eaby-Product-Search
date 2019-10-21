@@ -14,11 +14,11 @@ __Lineng Cao__
 - Featured with autocomplete, ip detected, group sorting and offline cart list.
 
 ## BackEnd Restful APIs
-- [Zipcode IP Autocomplete](http://aws.vince-amazing.com/api/ip-json/?startsWith=900)
-- [Google Image Search](http://aws.vince-amazing.com/api/google-img?v=1&productTitle=iphone)
-- [eBay Product Search](http://aws.vince-amazing.com/api/search/?keyword=iphone&buyerPostalCode=90007&MaxDistance=100&FreeShippingOnly=true&LocalPickupOnly=true)
-- [eBay Project Detail Search](http://aws.vince-amazing.com/api/item-detail/?itemId=283622107255)
-- [eBay Similar Search](http://aws.vince-amazing.com/api/similar/?itemId=283622107255)
+- [Zipcode IP Autocomplete](http://vince-amazing.us-west-1.elasticbeanstalk.com/api/ip-json/?startsWith=900)
+- [Google Image Search](http://vince-amazing.us-west-1.elasticbeanstalk.com/api/google-img?v=1&productTitle=iphone)
+- [eBay Product Search](http://vince-amazing.us-west-1.elasticbeanstalk.com/api/search/?keyword=iphone&buyerPostalCode=90007&MaxDistance=100&FreeShippingOnly=true&LocalPickupOnly=true)
+- [eBay Project Detail Search](http://vince-amazing.us-west-1.elasticbeanstalk.com/api/item-detail/?itemId=283622107255)
+- [eBay Similar Search](http://vince-amazing.us-west-1.elasticbeanstalk.com/api/similar/?itemId=283622107255)
 
 ### Screenshots
 __Detail__
