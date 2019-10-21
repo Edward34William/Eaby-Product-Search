@@ -7,7 +7,7 @@ __Lineng Cao__
 - PHP7 combined with Html5
 - All API called from PHP server side
 
-## [Angular Verison](http://aws.vince-amazing.com/search-product)
+## [Angular Verison](http://vince-amazing.us-west-1.elasticbeanstalk.com/search-product/)
 - Entire Angular7 with Bootstrap powered FrontEnd website, Using reactive form and angular materials principles.(`@angular/ng-bootstrap`, `@angular/material`, `angular-svg-round-progressbar`).
 - Nodejs & Express based BackEnd serving on AWS EC2 and Azure.
 - Special Restful APIs were created for supporting all requests from the frontend filled with error handling.
