@@ -12,7 +12,7 @@ import { DataService } from './data.service';
 export class AppComponent {
 
   constructor(private http: HttpClient, private jsonService: JsonService, private data: DataService) {
-    this.showJson('http://ip-api.com/json');
+    this.showJson('https://ipapi.co/postal');
     
     if(localStorage.getItem('globalWishList') != null){
       this.data.globalWishList = JSON.parse(localStorage.getItem('globalWishList'));
@@ -31,7 +31,7 @@ export class AppComponent {
     this.localzip = ''
     this.jsonService.getJson(url)
       .subscribe((data) => {
-        this.localzip = data['zip'];
+        this.localzip = data;
         // console.log(data);
       }),
       error => {
