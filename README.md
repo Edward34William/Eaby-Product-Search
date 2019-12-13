@@ -33,10 +33,14 @@ __Wish List Feature__
 
 ![](./screenshots/angular/wish-opt.gif)
 
-## [Android Verison](https://github.com/vincecao/Eaby-Product-Search/raw/master/AndroidVer/apk/product-search-debug-v1.apk)
+## Native Android Verison
+- Coded with Java adk28 in Android Studio
 - Nodejs & Express based BackEnd serving on aws and Azure.
 - Using recyclerview, fragment and data module.
 - Featured with autocomplete, ip detected, simliar group sorting, cache offline wish list
+
+### Download Demo
+[Release](https://github.com/vincecao/Eaby-Product-Search/releases)
 
 ![](https://i.imgur.com/ugxeANX.jpg)
 
@@ -59,6 +63,5 @@ __Wish List Feature__
 
 ![](./screenshots/android/wish_list-opt.gif)
 
-### Download Demo
-[Apk Download](https://github.com/vincecao/Eaby-Product-Search/raw/master/AndroidVer/apk/product-search-debug-v2.apk)
+
 
